@@ -1,0 +1,26 @@
+package swapiGraphQLGo
+
+import (
+	"context"
+) // THIS CODE IS A STARTING POINT ONLY. IT WILL NOT BE UPDATED WITH SCHEMA CHANGES.
+
+type Resolver struct{}
+
+func (r *Resolver) Query() QueryResolver {
+	return &queryResolver{r}
+}
+
+type queryResolver struct{ *Resolver }
+
+func (r *queryResolver) Person(ctx context.Context, id int) (*Person, error) {
+	panic("not implemented")
+}
+func (r *queryResolver) Planet(ctx context.Context, id int) (*Planet, error) {
+	panic("not implemented")
+}
+func (r *queryResolver) People(ctx context.Context) ([]*Person, error) {
+	panic("not implemented")
+}
+func (r *queryResolver) Planets(ctx context.Context) ([]*Planet, error) {
+	panic("not implemented")
+}
